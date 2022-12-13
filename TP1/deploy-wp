@@ -74,11 +74,12 @@ systemctl restart apache2
 wget -q -O wp-config-auth.php https://api.wordpress.org/secret-key/1.1/salt/
 
 cp 3clou22/TP1/wp-config-head.php wp-config.php
-cat 3clou22/TP1/wp-config-auth.php >> wp-config.php
+cat wp-config-auth.php >> wp-config.php
 cat 3clou22/TP1/wp-config-tail.php >> wp-config.php
 
 cp wp-config.php /var/www/html/wordpress/
 
 chown www-data:www-data /var/www/html/wordpress/wp-config.php
 
+mysql -u root -psecret < 3clou22/TP1/wordpress_initdb.sql
 
