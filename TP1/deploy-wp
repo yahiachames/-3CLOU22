@@ -2,6 +2,8 @@
 
 php_ini="/etc/php/7.4/apache2/php.ini"
 
+apt update
+
 apt -y install git
 
 # mettez l'url de VOTRE dépôt ici ...
