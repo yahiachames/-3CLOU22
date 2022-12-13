@@ -1,8 +1,7 @@
 # TP1 : Automatiser le déploiement de Wordpress dans le cloud
 
-Commencez par créer une instance de play2-nano (ou dev1m si plus
-de play2-nano disponible) en personnalisant son nom, notez son 
-adresse IP publique.
+Commencez par créer une instance de type pro2-xxs. Si vous n'y
+arrivez pas prévenez moi.
 
 Rappel : vous pouvez vous connecter en ssh sur vos instance en
 utilisant la clef privée que je vous ai fourni :
