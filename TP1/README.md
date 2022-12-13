@@ -51,7 +51,7 @@ la création d'une instance plus tard (mécanisme _cloud-init_)
 4. Copier le script de déploiement et l'exécuter :
 
 ~~~~Bash
-(systeme local)$ pushscript ip_publique_instance deploy-wp
+(systeme local)$ ./pushscript ip_publique_instance deploy-wp
 (systeme local)$ ./go ip_publique_instance
 (nom instance)# ./deploy-wp
 ~~~~
