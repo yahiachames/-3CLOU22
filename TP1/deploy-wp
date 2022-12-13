@@ -2,6 +2,11 @@
 
 php_ini="/etc/php/7.4/apache2/php.ini"
 
+apt -y install git
+
+# mettez l'url de VOTRE dépôt ici ...
+git clone https://gitlab.com/python_431/3clou22.git
+
 apt -y install php php-common php-mysql php-gmp php-curl php-intl php-mbstring php-xmlrpc php-gd php-xml php-cli php-zip
 
 apt -y install mariadb-server mariadb-client
@@ -63,5 +68,17 @@ a2dissite 000-default
 a2enmod rewrite ssl
 
 systemctl restart apache2
+
+# régénération des config auth, cf wp-config.php (commentaires)
+
+wget -q -O wp-config-auth.php https://api.wordpress.org/secret-key/1.1/salt/
+
+cp 3clous22/TP1/wp-config-head.php wp-config.php
+cat wp-config-auth.php >> wp-config.php
+cat wp-config-tail.php >> wp-config.php
+
+cp wp-config.php /var/www/html/wordpress/
+
+chown www-data:www-data /var/www/html/wordpress/wp-config.php
 
 
