@@ -21,3 +21,46 @@ y
 y
 y
 EOF
+
+mysql -u root -psecret <<EOF
+CREATE DATABASE wordpress;
+CREATE USER 'wp_user'@'localhost' IDENTIFIED BY 'Passw0rd';
+GRANT ALL ON wordpress.* TO 'wp_user'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+EXIT
+EOF
+
+wget https://wordpress.org/latest.tar.gz
+
+tar xf latest.tar.gz 
+mv wordpress /var/www/html/
+
+chown -R www-data:www-data /var/www/html/worpress
+chmod -R 755 /var/www/html/wordpress
+
+cat > /etc/apache2/sites-available/wordpress.conf <<EOF
+<VirtualHost *:80>
+   ServerName wordpress.example.com
+   ServerAlias www.wordpress.example.com
+   ServerAdmin admin@computingforgeeks.com
+   DocumentRoot /var/www/html/wordpress
+
+   ErrorLog ${APACHE_LOG_DIR}/wordpress_error.log
+   CustomLog ${APACHE_LOG_DIR}/wordpress_access.log combined
+
+
+   <Directory /var/www/html/wordpress>
+      Options FollowSymlinks
+      AllowOverride All
+      Require all granted
+   </Directory>
+
+</VirtualHost>
+EOF
+
+a2ensite wordpress
+a2enmod rewrite ssl
+
+systemctl restart apache2
+
+
