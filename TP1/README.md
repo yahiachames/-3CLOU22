@@ -47,8 +47,9 @@ la création d'une instance plus tard (mécanisme _cloud-init_)
 1. Créer une instance dans la plate-forme de cloud IaaS
 2. Ouvrir l'accès au port 80 en tcp à partir de votre IP locale
    sur cette instance (voir _Security Group_)
-3. Se connecter en ssh sur l'instance
-4. Copier le script de déploiement et l'exécuter :
+
+3. La suite (copie du script de déploiement et exécution sur
+l'instance) se réalise en trois simples étapes :
 
 ~~~~Bash
 (systeme local)$ ./pushscript ip_publique_instance deploy-wp
