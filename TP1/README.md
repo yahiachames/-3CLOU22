@@ -44,6 +44,8 @@ la création d'une instance plus tard (mécanisme _cloud-init_)
 
 # Comment utiliser ce déploiement ?
 
+0. Cloner ce dépôt (à part de votre dépôt, dans un autre répertoire)
+   ou bien le mettre à jour (`git pull`) si vous l'avez déjà cloné
 1. Créer une instance dans la plate-forme de cloud IaaS
 2. Ouvrir l'accès au port 80 en tcp à partir de votre IP locale
    sur cette instance (voir _Security Group_)
