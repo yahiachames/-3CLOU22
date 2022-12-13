@@ -56,3 +56,9 @@ la création d'une instance plus tard (mécanisme _cloud-init_)
 (nom instance)# ./deploy-wp
 ~~~~
 
+Ouvrez un navigateur Web et allez sur l'url : http://ip_publique_instance/
+
+Vous devriez voir un magnifique site Wordpress, que vous pouvez même
+administrer : http://ip_publique_instance/wp-admin/ (login : wpadmin,
+mot de passe : toto)
+
