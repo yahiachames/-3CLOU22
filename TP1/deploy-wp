@@ -59,6 +59,7 @@ cat > /etc/apache2/sites-available/wordpress.conf <<EOF
 EOF
 
 a2ensite wordpress
+a2dissite 000-default
 a2enmod rewrite ssl
 
 systemctl restart apache2
