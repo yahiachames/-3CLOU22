@@ -24,3 +24,5 @@ du déploiement de Wordpress automatiser le déploiement de cette
 sur une nouvelle instance.
 
 Documentez le sur le modèle de la fin du README.md du TP1.
+
+## Déploiement
