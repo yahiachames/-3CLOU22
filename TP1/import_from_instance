@@ -13,5 +13,7 @@ fi
 path=$2
 ip=$1
 
-scp -i ~/.ssh/id_rsa_jp root@$ip:$path .
+scp -o StrictHostKeyChecking=no \
+    -o UserKnownHostsFile=/dev/null \
+    -i ~/.ssh/id_rsa_jp root@$ip:$path .
 

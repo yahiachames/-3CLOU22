@@ -13,5 +13,7 @@ fi
 script=$2
 ip=$1
 
-scp -i ~/.ssh/id_rsa_jp $script root@$ip:
+scp -o StrictHostKeyChecking=no \
+    -o UserKnownHostsFile=/dev/null \
+    -i ~/.ssh/id_rsa_jp $script root@$ip:
 
