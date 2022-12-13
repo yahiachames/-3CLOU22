@@ -4,7 +4,7 @@ Commencez par créer une instance de type pro2-xxs. Si vous n'y
 arrivez pas prévenez moi.
 
 Rappel : vous pouvez vous connecter en ssh sur vos instance en
-utilisant la clef privée que je vous ai fourni :
+utilisant la clef privée que je vous ai fournie :
 
 ~~~~Bash
 $ ssh -i ~/.ssh/id_rsa_jp root@x.y.z.y
@@ -39,4 +39,4 @@ ensuite.
 Ajoutez ce script à votre dépot GIT dans le répertoire TP1.
 
 Nous verrons comment exécuter automatiquement ce script lors de
-la création d'une instance plus tard (mécanise _cloud-init_)
+la création d'une instance plus tard (mécanisme _cloud-init_)
