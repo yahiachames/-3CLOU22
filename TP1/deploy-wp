@@ -81,5 +81,7 @@ cp wp-config.php /var/www/html/wordpress/
 
 chown www-data:www-data /var/www/html/wordpress/wp-config.php
 
+# Obtenu après une finalisation manuelle avec :
+# myslqdump -u root -p wordpress > wordpress_initdb.sql
 mysql -u root -psecret wordpress < 3clou22/TP1/wordpress_initdb.sql
 
