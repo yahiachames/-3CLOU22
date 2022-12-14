@@ -50,6 +50,8 @@ resource "aws_instance" "tfinstance1" {
   }
 }
 
+
+
 output "tfinstance1_ip" {
   value = "${aws_instance.tfinstance1.*.public_ip}"
 }
