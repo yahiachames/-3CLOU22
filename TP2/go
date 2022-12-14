@@ -10,7 +10,7 @@ fi
 
 public_ip=$1
 
-ssh -i ~/.ssh/id_rsa_jp \
+ssh -vvv -i ~/.ssh/id_rsa_jp \
     -o StrictHostKeyChecking=no \
     -o UserKnownHostsFile=/dev/null \
     root@${public_ip}
