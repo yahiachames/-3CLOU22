@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+php_ini="/etc/php/7.4/apache2/php.ini"
+
+apt -y update
+
+apt -y install git
+
+# mettez l'url de VOTRE dépôt ici ...
+git clone https://gitlab.com/python_431/3clou22.git
+
+apt -y install apache2 libapache2-mod-php
+
+cp 3clou22/TP2/myapp/index.php /var/www/html/
+chown www-data:www-data /var/www/html/index.php
+rm /var/www/html/index.html
+
