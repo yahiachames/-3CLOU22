@@ -1,4 +1,5 @@
-resource "scaleway_instance_security_group" "ssh" {
+resource "scaleway_instance_security_group" "sg-ssh" {
+  name = "${local.team}-sg-ssh"
   project_id              = var.project_id
   inbound_default_policy  = "drop"
   outbound_default_policy = "accept"
@@ -10,7 +11,7 @@ resource "scaleway_instance_security_group" "ssh" {
   }
 }
 
-resource "scaleway_instance_security_group" "www" {
+resource "scaleway_instance_security_group" "sg-www" {
   project_id              = var.project_id
   inbound_default_policy  = "drop"
   outbound_default_policy = "accept"
