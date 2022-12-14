@@ -1,7 +1,7 @@
 .PHONY: help init plan apply destroy mrproper
 
 help:
-	@echo "Usage: make init|plan|apply|destroy"
+	@echo "Usage: make init|plan|apply|destroy|mrproper"
 	@echo "Note: create a teamname.txt containing a nice name like 'farting-zuckerberg' (not that one!)"
 
 init: locals.tf
