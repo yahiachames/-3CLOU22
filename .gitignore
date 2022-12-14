@@ -1,0 +1,11 @@
+ExTF_2/Tf/.terraform.lock.hcl
+ExTF_2/Tf/.terraform/
+ExTf_1/Tf/.terraform.lock.hcl
+ExTf_1/Tf/.terraform/
+ExTf_1/Tf/terraform.tfstate
+ExTf_1/Tf/terraform.tfstate.backup
+ExTf_1/go
+ExTf_1/ssh-keys/id_rsa_tfkeypair1
+ExTf_1/ssh-keys/id_rsa_tfkeypair1.pub
+TP1/wp-config-auth.php
+
