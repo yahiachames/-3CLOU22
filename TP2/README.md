@@ -25,4 +25,23 @@ sur une nouvelle instance.
 
 Documentez le sur le modèle de la fin du README.md du TP1.
 
-## Déploiement
+# Comment utiliser ce déploiement ?
+
+0. Cloner ce dépôt (à part de votre dépôt, dans un autre répertoire)
+   ou bien le mettre à jour (`git pull`) si vous l'avez déjà cloné
+1. Créer une instance dans la plate-forme de cloud IaaS
+2. Ouvrir l'accès au port 80 en tcp à partir de votre IP locale
+   sur cette instance (voir _Security Group_)
+
+3. La suite (copie du script de déploiement et exécution sur
+l'instance) se réalise en trois simples étapes :
+
+~~~~Bash
+(systeme local)$ ./pushscript ip_publique_instance deploy-myapp
+(systeme local)$ ./go ip_publique_instance
+(nom instance)# ./deploy-myapp
+~~~~
+
+Ouvrez un navigateur Web et allez sur l'url : http://ip_publique_instance/
+
+
