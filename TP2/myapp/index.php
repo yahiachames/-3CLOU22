@@ -1,4 +1,4 @@
-[3;2~<html>
+<html>
 <head><title>Mon appli PHP</title>
 
 <body>
