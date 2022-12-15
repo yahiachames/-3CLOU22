@@ -7,7 +7,7 @@
 Modifiez instances.tf pour :
 
 - créer deux instances nommées www1 et www2
-- obtenir leur ip en sortie
+- obtenir leurs adresses IP en sortie
 - modifier le script go pour accepter en argument le nom de l'instance
   à atteindre en ssh (www1 ou www2)
 - vérifiez que vous pouvez vous connecter en ssh sur les deux instances
