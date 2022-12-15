@@ -25,6 +25,17 @@ resource "scaleway_instance_server" "web1" {
   }
 
   security_group_id = scaleway_instance_security_group.sg-www.id
+
+  #user_data                   = file("../Scripts/instance_init1.sh")
+
+  user_data = {
+    name        = "initscript"
+    #cloud-init = file("../Script/instance_init1.sh")
+    cloud-init = file("${path.module}/init_instance.sh")
+    #cloud-init = file("${path.module}/deploy-wp")
+  }
+
+
 }
 
 resource "scaleway_instance_server" "web2" {
