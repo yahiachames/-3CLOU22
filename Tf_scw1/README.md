@@ -25,7 +25,16 @@ $ make plan
 $ make apply
 ~~~~
 
-Si tous va bien un groupe de sécurité et une instance (pour l'instant) devrait être déployées.
+Si tout va bien un groupe de sécurité et une instance (pour l'instant) devrait être déployées.
+
+Le script `go` permet de se connecter en ssh sur l'instance créée :
+
+~~~~Bash
+$ ./go
+...
+Last login: Thu Dec 15 08:46:04 2022 from 46.247.227.178
+root@brainded-elon-web:~# 
+~~~~
 
 Pour supprimer ce déploiement :
 
