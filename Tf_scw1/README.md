@@ -15,14 +15,14 @@ $ scw instance server create type=PRO2-XXS zone=fr-par-1 image=debian_bullseye r
 ## Terraform
 
 1. Télécharger et installer le logiciel _terraform_ et installez le de la même façon que le client _scw_
-2. Allez dans le répertoire _Tf_ et exécutez :
-3. Choisissez un nom pour projet d'équipe ou individuel, enregistrez le dans `teamname.txt`, par exemple ici : _braindead-elon_ (trouvez autre chose) :
+2. Allez dans le répertoire _Tf_ et exécutez les commandes ci-dessous
+(choisissez un nom pour projet d'équipe ou individuel, enregistrez le dans `teamname.txt`, par exemple ici : _braindead-elon_ (trouvez autre chose))
 
 ~~~~Bash
 $ echo braindead-elon > teamname.txt
 $ make init
 $ make plan 
-$ make deploy
+$ make apply
 ~~~~
 
 Si tous va bien un groupe de sécurité et une instance (pour l'instant) devrait être déployées.
