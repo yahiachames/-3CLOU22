@@ -32,7 +32,7 @@ public_ip=$( terraform output -json $ip_id | jq  -s -r '.[0]' )
 echo "Instance public ip:" ${public_ip}
 
 #ssh -i ../ssh-keys/id_rsa_tfkeypair1 \
-ssh -i ~/.ssh/id_rsa_jp \
+ssh -i ~/.ssh/id_rsa_pv \
     -o StrictHostKeyChecking=no \
     -o UserKnownHostsFile=/dev/null \
     root@${public_ip}

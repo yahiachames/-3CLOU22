@@ -8,12 +8,9 @@ terraform {
 }
 
 provider "scaleway" {
+   access_key      = var.access_key
+    secret_key      = var.secret_key
   zone   = "fr-par-1"
   region = "fr-par"
 }
 
-variable "project_id" {
-  type        = string
-  default = "b73790d7-afbb-40b5-bed0-2f3c446da796"
-  description = "Versailles Hexagone"
-}
