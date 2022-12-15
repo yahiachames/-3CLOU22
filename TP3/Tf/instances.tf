@@ -30,7 +30,6 @@ resource "scaleway_instance_server" "web1" {
 
   user_data = {
     name        = "initscript"
-    #cloud-init = file("../Script/instance_init1.sh")
     cloud-init = file("${path.module}/init_instance.sh")
     #cloud-init = file("${path.module}/deploy-wp")
   }
