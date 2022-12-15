@@ -49,4 +49,11 @@ Il n'y a aucune connectivité interne entre nos instances.
 Conclusion : il faut définir un "VPC/Virtual Network" commun pour nos
 instances.
 
+Note : la solution valide en plus un point qui restait problématique dans
+mes tests précédent : l'exécution automatique d'un script lors du premier
+démarrage des instances (mécanisme _cloud-init_). Il semble que les
+scripts doivent être dans le même répertoire (mais pourquoi ?).
+
+On peut même reprendre le script deploy-wp pour déployer Wordpress en
+reprenant tel quel le script mis au point précédemment.
 
