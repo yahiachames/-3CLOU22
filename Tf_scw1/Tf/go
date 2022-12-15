@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+if ! type jq
+then
+  echo "jq tool not installed, use apt, dnf or brew to install it"
+  exit 1
+fi
+
+public_ip=$( terraform output -json web_ip | jq  -s -r '.[0]' )
+
+echo "Instance public ip:" ${public_ip}
+
+#ssh -i ../ssh-keys/id_rsa_tfkeypair1 \
+ssh -i ~/.ssh/id_rsa_jp \
+    -o StrictHostKeyChecking=no \
+    -o UserKnownHostsFile=/dev/null \
+    root@${public_ip}

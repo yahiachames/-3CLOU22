@@ -3,11 +3,11 @@ resource "scaleway_instance_ip" "public_ip" {
 }
 
 resource "scaleway_instance_server" "web" {
-  name = "${local.team}-ssh"
+  name = "${local.team}-web"
 
   project_id = var.project_id
   type       = "DEV1-L"
-  image      = "ubuntu_jammy"
+  image      = "debian_bullseye"
 
   tags = ["front", "web"]
 
@@ -21,5 +21,9 @@ resource "scaleway_instance_server" "web" {
   }
 
   security_group_id = scaleway_instance_security_group.sg-www.id
+}
+
+output "web_ip" {
+  value = "${scaleway_instance_server.web.public_ip}"
 }
 
