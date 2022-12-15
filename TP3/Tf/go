@@ -6,6 +6,12 @@ then
   exit 1
 fi
 
+if terraform output | grep -q 'No outputs found' 
+then
+  echo "No output. Apply deployement first."
+  exit 42
+fi
+
 if (( $# < 1 ))
 then
   echo "Usage: $0 ip_id"
