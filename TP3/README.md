@@ -6,9 +6,9 @@
 
 Modifiez instances.tf pour :
 
-- créer deux instances nommées www1 et www2
+- créer deux instances nommées web1 et web2
 - obtenir leurs adresses IP en sortie
-- modifier le script go pour accepter en argument le nom de l'instance
+- modifier le script go pour accepter en argument l'id de l'ip
   à atteindre en ssh (www1 ou www2)
 - vérifiez que vous pouvez vous connecter en ssh sur les deux instances
 - on va tester la connectivité internet entre les deux instances
@@ -44,6 +44,7 @@ Hosts/Net: 2                     Class A, Private Internet, PtP Link RFC 3021
 ~~~~
 
 Un seul hôte possible (l'autre adresse en 0 est réservée au réseau lui-même).
+Il n'y a aucune connectivité interne entre nos instances.
 
 Conclusion : il faut définir un "VPC/Virtual Network" commun pour nos
 instances.
